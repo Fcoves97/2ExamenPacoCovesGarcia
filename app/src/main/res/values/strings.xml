@@ -9,4 +9,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="fitness">fitness</string>
+    <string name="Ejemplo_nombreLista">Lista 1</string>
+    <string name="Ejemplo_fecha">31/01/2023</string>
+    <string name="todo">TODO</string>
+    <string name="favorito">Favorito</string>
+    <string name="nombre">Nombre</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

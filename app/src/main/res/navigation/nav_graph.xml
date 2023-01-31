@@ -3,26 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/listaFragment2">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/tarea_fragment"
+        android:name="pacocovesgarcia.iessochoa.examen.ui.tarea_fragment"
+        android:label="tarea_fragment"
+        tools:layout="@layout/tarea_fragment" />
+    <fragment
+        android:id="@+id/listaFragment2"
         android:name="pacocovesgarcia.iessochoa.examen.ui.ListaFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:label="lista_fragment"
+        tools:layout="@layout/lista_fragment" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="pacocovesgarcia.iessochoa.examen.ui.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_listaFragment_to_tarea_fragment"
+            app:destination="@id/tarea_fragment" />
     </fragment>
 </navigation>

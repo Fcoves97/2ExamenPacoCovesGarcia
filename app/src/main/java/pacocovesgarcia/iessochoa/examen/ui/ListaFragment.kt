@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import pacocovesgarcia.iessochoa.examen.R
-import pacocovesgarcia.iessochoa.examen.databinding.FragmentFirstBinding
+import pacocovesgarcia.iessochoa.examen.databinding.FragmentListaBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class ListaFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentListaBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +25,7 @@ class ListaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentListaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -33,8 +33,8 @@ class ListaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.fabNuevo.setOnClickListener {
+            findNavController().navigate(R.id.action_listaFragment_to_tarea_fragment)
         }
     }
 
