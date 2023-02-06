@@ -3,20 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listaFragment2">
+    android:label="@string/second_fragment_label"
+    app:startDestination="@id/listaFragment">
 
     <fragment
-        android:id="@+id/tarea_fragment"
-        android:name="pacocovesgarcia.iessochoa.examen.ui.tarea_fragment"
-        android:label="tarea_fragment"
-        tools:layout="@layout/tarea_fragment" />
-    <fragment
-        android:id="@+id/listaFragment2"
+        android:id="@+id/listaFragment"
         android:name="pacocovesgarcia.iessochoa.examen.ui.ListaFragment"
         android:label="lista_fragment"
-        tools:layout="@layout/lista_fragment" >
+        tools:layout="@layout/lista_fragment">
         <action
-            android:id="@+id/action_listaFragment_to_tarea_fragment"
-            app:destination="@id/tarea_fragment" />
+            android:id="@+id/action_listaFragment_to_tareaFragment"
+            app:destination="@id/tareaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tareaFragment"
+        android:name="pacocovesgarcia.iessochoa.examen.ui.TareaFragment"
+        android:label="fragment_tarea"
+        tools:layout="@layout/tarea_fragment" >
+        <argument
+            android:name="tarea"
+            app:argType="pacocovesgarcia.iessochoa.examen.model.Tarea"
+            app:nullable="true" />
     </fragment>
 </navigation>

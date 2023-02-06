@@ -29,11 +29,6 @@ class AppViewModel(application: Application): AndroidViewModel(application) {
         //inicia repositorio
         Repository(getApplication<Application>().applicationContext)
         repositorio=Repository
-        //tareasLiveData =repositorio.getAllTareas()
-        /*tareasLiveData= Transformations.switchMap(soloSinPagarLiveData)
-        {soloSinPagar->Repository.getTareasFiltroSinPagar(soloSinPagar)}*/
-        /*tareasLiveData= Transformations.switchMap(estado)
-        {estado->Repository.getTareasFiltroEstado(estado)}*/
         tareasLiveData=Transformations.switchMap(filtrosLiveData)
         { mapFiltro ->
             val AplicarFitness = mapFiltro!![SOLO_SIN_FITNESS] as Boolean
@@ -57,10 +52,6 @@ class AppViewModel(application: Application): AndroidViewModel(application) {
         Repository.delTarea(tarea)
     }
 
-    /**
-     * Modifica el Map filtrosLiveData el elemento "SOLO_SIN_PAGAR"
-     * que activará el Transformations de TareasLiveData
-     */
     fun setSoloSinFitness(soloSinFitness: Boolean) {
         //recuperamos el map
         val mapa = filtrosLiveData.value

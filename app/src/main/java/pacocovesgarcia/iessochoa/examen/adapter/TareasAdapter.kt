@@ -3,7 +3,7 @@ package pacocovesgarcia.iessochoa.examen.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import pacocovesgarcia.iessochoa.examen.databinding.FragmentTareaBinding
+import pacocovesgarcia.iessochoa.examen.databinding.FragmentTareaaBinding
 import pacocovesgarcia.iessochoa.examen.model.Tarea
 
 class TareasAdapter(): RecyclerView.Adapter<TareasAdapter.TareaViewHolder>()
@@ -16,7 +16,7 @@ class TareasAdapter(): RecyclerView.Adapter<TareasAdapter.TareaViewHolder>()
         //notifica al adaptador que hay cambios y tiene que redibujar el ReciclerView
         notifyDataSetChanged()
     }
-    inner class TareaViewHolder(val binding: FragmentTareaBinding)
+    inner class TareaViewHolder(val binding: FragmentTareaaBinding)
         : RecyclerView.ViewHolder(binding.root){
             init {
                 //inicio del click de icono borrar
@@ -37,7 +37,7 @@ class TareasAdapter(): RecyclerView.Adapter<TareasAdapter.TareaViewHolder>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             TareaViewHolder {
         //utilizamos binding, en otro caso hay que indicar el item.xml. Para más detalles puedes verlo en la documentación
-        val binding = FragmentTareaBinding
+        val binding = FragmentTareaaBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
         return TareaViewHolder(binding)
     }

@@ -8,6 +8,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import pacocovesgarcia.iessochoa.examen.model.Tarea
+import kotlin.random.Random
 
 @Database(entities = [Tarea::class], version = 1, exportSchema = false)
 public abstract class TareasDataBase : RoomDatabase() {
@@ -39,7 +40,7 @@ public abstract class TareasDataBase : RoomDatabase() {
     /**
      * Permite iniciar la base de datos con Tareas
      */
-    /*private class InicioDbCallback() : RoomDatabase.Callback() {
+    private class InicioDbCallback() : RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
             INSTANCE?.let { database ->
@@ -51,28 +52,30 @@ public abstract class TareasDataBase : RoomDatabase() {
         //Iniciamos la base de datos con Tareas de ejemplo
         suspend fun cargarDatabase(tareasDao: TareasDAO) {
             val tecnicos = listOf(
-                "Pepe Gotero",
-                "Sacarino Pómez",
-                "Mortadelo Fernández",
-                "Filemón López",
-                "Zipi Climent",
-                "Zape Gómez"
+                "Paco",
+                "Luis",
+                "Juan",
+                "Javier",
+                "Felipe"
+            )
+            val fecha = listOf(
+                "28/01/2023",
+                "27/01/2023",
+                "29/01/2023",
+                "30/01/2023",
+                "26/01/2023"
             )
             lateinit var tarea: Tarea
             (1..10).forEach {
                 // Thread.sleep(2000)
                 tarea = Tarea(
-                    (0..4).random(),
-                    (0..2).random(),
-                    Random.nextBoolean(),
-                    (0..2).random(),
-                    (0..30).random(),
-                    (0..5).random().toFloat(),
                     tecnicos.random(),
-                    "tarea $it realizada por el técnico"
+                    fecha.random(),
+                    Random.nextBoolean(),
+                    Random.nextBoolean()
                 )
                 tareasDao.addTarea(tarea)
             }
         }
-    }*/
+    }
 }

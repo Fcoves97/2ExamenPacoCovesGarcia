@@ -7,6 +7,18 @@
     android:id="@+id/clytTarea"
     tools:context=".ui.MainActivity">
 
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintStart_toEndOf="@+id/tvNombre"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <RadioButton
         android:id="@+id/rbFavoritoDato"
         android:layout_width="wrap_content"
@@ -45,18 +57,6 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/tvNombreDato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/Ejemplo_nombreLista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
-        app:layout_constraintStart_toEndOf="@+id/tvNombre"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tvFechaRealizacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,18 +66,6 @@
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
-
-    <TextView
-        android:id="@+id/tvFechaDato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/Ejemplo_fecha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvFechaRealizacion"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreDato" />
 
     <RadioButton
         android:id="@+id/rbFitnessDato"
@@ -89,6 +77,18 @@
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFechaRealizacion" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaRealizacion"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
